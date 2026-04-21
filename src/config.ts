@@ -93,7 +93,7 @@ export const siteConfig = {
       dates: "March 6th – 19th, 2026 · 14 days",
       current: false,
       image: "/yacht-yacht4.webp",
-      imageAlt: "VHF radio communication during vessel operations",
+      imageAlt: "Polishing M/Y Mystere exterior in Fort Lauderdale marina",
       bullets: [
         "Full exterior washdown and detailing to maintain yacht presentation",
         "Deck cleaning, maintenance, and preparation of exterior areas",
