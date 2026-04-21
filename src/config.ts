@@ -229,11 +229,11 @@ export const siteConfig = {
     },
   ],
 
-  // Offshore Performance Records — Masters who signed performance reports and sea service certificates
+  // Offshore Performance Records — Masters who signed performance reports during offshore service
   offshoreCredentials: {
     documentUrl: "/offshore-performances.pdf",
     summary:
-      "338+ days of documented sea service across 3 DP-2 Dynamic Positioning Diving Support Vessels. 5 consecutive Performance Reports signed by Masters — all rated Should Be Reemployed: YES.",
+      "338+ days of documented sea service across 3 DP-2 Dynamic Positioning Diving Support Vessels. 8 consecutive Performance Reports signed by Masters — all rated Should Be Reemployed: YES.",
     vessels: [
       {
         vessel: "M/V Sapphire",
