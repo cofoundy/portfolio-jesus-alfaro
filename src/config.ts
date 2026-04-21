@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Jesus Alfaro",
-  title: "OOW Unlimited · Deckhand / Junior Officer",
+  title: "OOW Unlimited · Mate/Deckhand · 2nd Officer",
   description:
     "Jesus Alfaro — OOW Unlimited Deckhand based in Fort Lauderdale. Seeking a long-term position onboard a private or charter motor yacht.",
   accentColor: "#0A1628",
@@ -16,10 +16,10 @@ export const siteConfig = {
   },
 
   tagline:
-    "Seeking a long-term position onboard a private or charter motor yacht. Currently supporting daily operations aboard a private 87' motor yacht in Fort Lauderdale.",
+    "Seeking a long-term position onboard a private or charter motor yacht. OOW Unlimited with commercial offshore background and hands-on yacht deck experience across Fort Lauderdale.",
 
   locationLine: "Fort Lauderdale, FL · Available Immediately",
-  statusChip: "Currently onboard M/Y Princess Ashita — 87′",
+  statusChip: "Fort Lauderdale Based",
 
   stats: [
     { value: "OOW", label: "Unlimited License" },
@@ -42,8 +42,8 @@ export const siteConfig = {
       size: "87′ Motor Yacht",
       location: "Fort Lauderdale, FL",
       role: "Mate / Deckhand — Day Trips",
-      dates: "April 2026 – Present",
-      current: true,
+      dates: "April 3 – April 17, 2026",
+      current: false,
       image: "/yacht-yacht1.webp",
       imageAlt: "Detailing a private motor yacht at Fort Lauderdale marina",
       bullets: [
@@ -194,6 +194,15 @@ export const siteConfig = {
 
   references: [
     {
+      name: "Capt. Sylvester Moise",
+      role: "Captain · M/Y Princess Ashita",
+      badge: "Signed Reference Letter",
+      letterUrl: "/reference-letter-moise.pdf",
+      flag: "🇺🇸",
+      phone: "+1 (954) 326-6873",
+      email: "sylvestermoise42@aol.com",
+    },
+    {
       name: "Capt. Jhonny Pretell",
       role: "Offshore Operations Consultant · Owner, Sailing Yacht Saucy Sue",
       flag: "🇲🇽",
@@ -219,6 +228,48 @@ export const siteConfig = {
       whatsapp: "+1 231 342 7608",
     },
   ],
+
+  // Offshore Performance Records — Masters who signed performance reports and sea service certificates
+  offshoreCredentials: {
+    documentUrl: "/offshore-performances.pdf",
+    summary:
+      "338+ days of documented sea service across 3 DP-2 Dynamic Positioning Diving Support Vessels. 5 consecutive Performance Reports signed by Masters — all rated Should Be Reemployed: YES.",
+    vessels: [
+      {
+        vessel: "M/V Sapphire",
+        flag: "🇨🇾",
+        type: "DP-2 Diving Support Vessel · 84m",
+        role: "2nd Officer / DPO",
+        days: "80 days",
+        period: "Jul – Oct 2024",
+        master: "Capt. Egon Badurina",
+        quote:
+          "Young and recently promoted DPO/2nd Officer who is gaining experience with required more assignments. Always respectfull and willing to go for extra mile. Pleasure to work with.",
+      },
+      {
+        vessel: "M/V Tahid Kaveri",
+        flag: "🇻🇨",
+        type: "DP-2 Diving Support Vessel · 78m",
+        role: "3rd Officer / DPO Trainee",
+        days: "102 days",
+        period: "Apr – Jul 2024",
+        master: "Capt. Jaime Martinez Sanchez",
+        quote:
+          "Good attitude to work and very respectful with his colleagues. Sailing between the ports of Ciudad del Carmen, Campeche and the Campeche Gas and Oil Field zone, Gulf of Mexico.",
+      },
+      {
+        vessel: "M/V Trapiche Emerald",
+        flag: "🇱🇷",
+        type: "DP-2 Diving Support Vessel · 82m",
+        role: "3rd Officer / DPO Trainee",
+        days: "156 days",
+        period: "Aug 2023 – Jan 2024",
+        master: "Capt. Antonio Mladinov",
+        quote:
+          "Excellent progress in gaining knowledge and experience onboard a DSV/subsea-operated vessel. Valuable team member — I wish to see him become a permanent officer. Sailing Walvis Bay → Cabinda → Luanda.",
+      },
+    ],
+  },
 
   cta: {
     title: "Ready to Join Your Crew",

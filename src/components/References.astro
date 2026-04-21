@@ -30,14 +30,24 @@ const refs = siteConfig.references;
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
       {refs.map((r, idx) => (
         <article
-          class={`reveal stagger-${(idx % 4) + 1} card-hover relative p-7 lg:p-8 rounded-sm`}
-          style={`background-color: ${siteConfig.colors.surface}; border: 1px solid ${siteConfig.colors.primary}20;`}
+          class={`reveal stagger-${(idx % 4) + 1} card-hover relative p-7 lg:p-8 rounded-sm ${r.letterUrl ? 'lg:col-span-2' : ''}`}
+          style={`background-color: ${siteConfig.colors.surface}; border: 1px solid ${siteConfig.colors.primary}20;` + (r.letterUrl ? ` border-left: 3px solid ${siteConfig.colors.accent};` : '')}
         >
-          <!-- Teak gold corner accent -->
-          <div class="absolute top-0 left-0 w-12 h-[3px]" style={`background-color: ${siteConfig.colors.accent};`}></div>
+          {!r.letterUrl && (
+            <!-- Teak gold corner accent (non-featured cards) -->
+            <div class="absolute top-0 left-0 w-12 h-[3px]" style={`background-color: ${siteConfig.colors.accent};`}></div>
+          )}
 
           <div class="flex items-start justify-between mb-4">
             <div class="flex-1">
+              {r.badge && (
+                <div class="mb-2 inline-flex items-center gap-2 px-2.5 py-1 rounded-sm text-[10px] tracking-[0.2em] uppercase font-semibold" style={`background-color: ${siteConfig.colors.accent}; color: ${siteConfig.colors.primaryDark};`}>
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm5 6a1 1 0 10-2 0v3a1 1 0 102 0v-3zm4-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+                  {r.badge}
+                </div>
+              )}
               <h3 class="text-xl md:text-2xl font-medium" style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;`}>
                 {r.name}
               </h3>
@@ -74,6 +84,20 @@ const refs = siteConfig.references;
               </a>
             )}
           </div>
+          {r.letterUrl && (
+            <a
+              href={r.letterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-[11px] tracking-[0.25em] uppercase"
+              style={`background-color: ${siteConfig.colors.primaryDark}; color: ${siteConfig.colors.surfaceLight};`}
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Download Reference Letter
+            </a>
+          )}
         </article>
       ))}
     </div>
