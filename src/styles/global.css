@@ -91,6 +91,17 @@ h1, h2, h3, h4, h5, h6 {
 .stagger-5 { transition-delay: 500ms; }
 .stagger-6 { transition-delay: 600ms; }
 
+/* Fallback: if JS doesn't run or is slow, show content anyway after 1.5s */
+@keyframes revealFallback {
+  to { opacity: 1; transform: none; }
+}
+.reveal, .reveal-left, .reveal-right, .reveal-scale {
+  animation: revealFallback 0.6s ease-out 1.5s forwards;
+}
+.reveal.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-scale.revealed {
+  animation: none;
+}
+
 /* ═══════════════════════════════════════════════════════════
    HERO LOAD ANIMATIONS
    ═══════════════════════════════════════════════════════════ */
