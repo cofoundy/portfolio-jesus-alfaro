@@ -77,7 +77,7 @@ export const siteConfig = {
       dates: "March 21st – 30th, 2026 · 10 days",
       current: false,
       image: "/yacht-yacht3.webp",
-      imageAlt: "Superyachts at West Palm Beach Boat Show",
+      imageAlt: "Jesus Alfaro on yacht deck during All Class Detailing project",
       bullets: [
         "Worked on multiple yachts at the West Palm Beach Boat Show (Sunseeker, Jupiter, Sirena)",
         "Full exterior detailing: washdowns, polishing, and surface care",
