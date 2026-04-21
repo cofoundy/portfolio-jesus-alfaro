@@ -1,0 +1,93 @@
+---
+import { siteConfig } from "../config";
+const b = siteConfig.offshoreBackground;
+const halfway = Math.ceil(b.responsibilities.length / 2);
+const col1 = b.responsibilities.slice(0, halfway);
+const col2 = b.responsibilities.slice(halfway);
+---
+
+<section
+  id="offshore"
+  class="py-20 md:py-28"
+  style={`background-color: ${siteConfig.colors.surface}`}
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="mb-12 text-center reveal">
+      <div class="flex items-center gap-3 justify-center mb-4">
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+          Prior Experience
+        </span>
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+      </div>
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight"
+        style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}
+      >
+        {b.title}
+      </h2>
+    </div>
+
+    <!-- Main card -->
+    <div
+      class="reveal relative rounded-sm p-8 md:p-12 lg:p-16 shadow-lg"
+      style={`background-color: ${siteConfig.colors.surfaceLight}; border: 1px solid ${siteConfig.colors.primary}25; border-left: 4px solid ${siteConfig.colors.accent};`}
+    >
+      <!-- Top row: period badge + company -->
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8 pb-6 border-b" style={`border-color: ${siteConfig.colors.primary}20;`}>
+        <div>
+          <div class="text-[11px] tracking-[0.25em] uppercase font-semibold mb-2" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+            {b.period}
+          </div>
+          <h3 class="text-2xl md:text-3xl font-light" style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}>
+            {b.company}
+          </h3>
+          <p class="mt-1 text-sm md:text-base italic" style={`color: ${siteConfig.colors.primary}; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;`}>
+            {b.roles}
+          </p>
+        </div>
+        <div class="md:text-right">
+          <div class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-1" style={`color: ${siteConfig.colors.primary};`}>Vessels</div>
+          <div class="text-sm font-medium" style={`color: ${siteConfig.colors.primaryDark};`}>{b.vessels}</div>
+          <div class="text-[10px] tracking-[0.25em] uppercase font-semibold mt-3 mb-1" style={`color: ${siteConfig.colors.primary};`}>Operational Area</div>
+          <div class="text-sm font-medium" style={`color: ${siteConfig.colors.primaryDark};`}>{b.operationalArea}</div>
+        </div>
+      </div>
+
+      <!-- Clients -->
+      <div class="mb-8">
+        <div class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-3" style={`color: ${siteConfig.colors.primary};`}>Notable Clients</div>
+        <div class="flex flex-wrap gap-2">
+          {b.clients.map((c) => (
+            <span
+              class="px-4 py-1.5 rounded-full text-xs font-medium tracking-wide"
+              style={`background-color: ${siteConfig.colors.primaryDark}; color: ${siteConfig.colors.surfaceLight};`}
+            >
+              {c}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Key responsibilities -->
+      <div>
+        <div class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-4" style={`color: ${siteConfig.colors.primary};`}>Key Bridge Responsibilities</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5">
+          {col1.map((r) => (
+            <div class="flex items-start gap-3 text-sm leading-relaxed" style={`color: ${siteConfig.colors.primaryDark};`}>
+              <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={`background-color: ${siteConfig.colors.accent};`}></span>
+              <span>{r}</span>
+            </div>
+          ))}
+          {col2.map((r) => (
+            <div class="flex items-start gap-3 text-sm leading-relaxed" style={`color: ${siteConfig.colors.primaryDark};`}>
+              <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={`background-color: ${siteConfig.colors.accent};`}></span>
+              <span>{r}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

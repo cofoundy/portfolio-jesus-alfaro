@@ -1,36 +1,39 @@
 @import "tailwindcss";
 
-/* ═══════════════════════════════════════════════════════
-   PRO-STARTER TEMPLATE
-   Derived from Annie Sandoval Premium design
-   ═══════════════════════════════════════════════════════ */
-
 :root {
+  /* Color tokens — overridden per-client via config.ts inline styles */
+  --color-primary-dark: #4338ca;
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-accent: #f97316;
+  --color-surface: #eef2ff;
+  --color-surface-light: #f5f7ff;
+
+  /* Motion Design Tokens */
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
   --duration-fast: 200ms;
   --duration-normal: 400ms;
   --duration-slow: 600ms;
 }
 
 body {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
-  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+.font-accent {
+  font-family: 'Cormorant', serif;
 }
 
-/* ═══════════════════════════════════════════════════════
-   SCROLL REVEALS (multi-direction)
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   SCROLL REVEAL ANIMATIONS
+   ═══════════════════════════════════════════════════════════ */
 
 .reveal {
   opacity: 0;
@@ -38,7 +41,11 @@ html {
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
 }
-.reveal.revealed { opacity: 1; transform: translateY(0); }
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .reveal-left {
   opacity: 0;
@@ -46,7 +53,11 @@ html {
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
 }
-.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .reveal-right {
   opacity: 0;
@@ -54,7 +65,11 @@ html {
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
 }
-.reveal-right.revealed { opacity: 1; transform: translateX(0); }
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .reveal-scale {
   opacity: 0;
@@ -62,17 +77,23 @@ html {
   transition: opacity var(--duration-slow) var(--ease-bounce),
               transform var(--duration-slow) var(--ease-bounce);
 }
-.reveal-scale.revealed { opacity: 1; transform: scale(1); }
 
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
 .stagger-1 { transition-delay: 100ms; }
 .stagger-2 { transition-delay: 200ms; }
 .stagger-3 { transition-delay: 300ms; }
 .stagger-4 { transition-delay: 400ms; }
 .stagger-5 { transition-delay: 500ms; }
+.stagger-6 { transition-delay: 600ms; }
 
-/* ═══════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════
    HERO LOAD ANIMATIONS
-   ═══════════════════════════════════════════════════════ */
+   ═══════════════════════════════════════════════════════════ */
 
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -92,9 +113,9 @@ html {
 .hero-social { animation: heroFadeUp 0.6s var(--ease-out) 0.8s both; }
 .hero-stats { animation: heroFadeUp 0.6s var(--ease-out) 0.9s both; }
 
-/* ═══════════════════════════════════════════════════════
-   STAT COUNTER ANIMATION
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   COUNTER ANIMATION
+   ═══════════════════════════════════════════════════════════ */
 
 @keyframes countUp {
   from { opacity: 0; transform: translateY(10px); }
@@ -106,23 +127,30 @@ html {
 .stat-number:nth-child(2) { animation-delay: 1.1s; }
 .stat-number:nth-child(3) { animation-delay: 1.2s; }
 
-/* ═══════════════════════════════════════════════════════
-   ACCENT BAR SHIMMER
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   TIMELINE ANIMATION
+   ═══════════════════════════════════════════════════════════ */
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+@keyframes timelineDraw {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-.accent-bar-shimmer {
-  background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
+@keyframes timelineDotPop {
+  from { transform: scale(0) translateX(-50%); }
+  to { transform: scale(1) translateX(-50%); }
 }
 
-/* ═══════════════════════════════════════════════════════
-   CARD HOVER + SHINE
-   ═══════════════════════════════════════════════════════ */
+.timeline-line { animation: timelineDraw 1s var(--ease-out) both; }
+.timeline-dot { animation: timelineDotPop 0.4s var(--ease-bounce) both; }
+.timeline-dot:nth-child(1) { animation-delay: 0.3s; }
+.timeline-dot:nth-child(2) { animation-delay: 0.5s; }
+.timeline-dot:nth-child(3) { animation-delay: 0.7s; }
+.timeline-dot:nth-child(4) { animation-delay: 0.9s; }
+
+/* ═══════════════════════════════════════════════════════════
+   MICRO-INTERACTIONS
+   ═══════════════════════════════════════════════════════════ */
 
 .card-hover {
   transition: transform var(--duration-normal) var(--ease-out),
@@ -130,28 +158,24 @@ html {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
 }
 
-.card-shine {
-  position: relative;
-  overflow: hidden;
+.btn-hover {
+  transition: transform var(--duration-fast) var(--ease-bounce),
+              box-shadow var(--duration-fast) var(--ease-out);
 }
-.card-shine::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
-  transition: left 0.5s ease;
+.btn-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
 }
-.card-shine:hover::before { left: 100%; }
 
-/* ═══════════════════════════════════════════════════════
-   SKILL PILL HOVER
-   ═══════════════════════════════════════════════════════ */
+.icon-hover {
+  transition: transform var(--duration-fast) var(--ease-bounce);
+}
+.icon-hover:hover {
+  transform: scale(1.15) rotate(5deg);
+}
 
 .skill-hover {
   transition: transform var(--duration-fast) var(--ease-bounce),
@@ -159,29 +183,6 @@ html {
               border-color var(--duration-fast) var(--ease-out);
 }
 .skill-hover:hover { transform: scale(1.05); }
-
-/* ═══════════════════════════════════════════════════════
-   ICON HOVER (social circles)
-   ═══════════════════════════════════════════════════════ */
-
-.icon-hover {
-  transition: transform var(--duration-fast) var(--ease-bounce);
-}
-.icon-hover:hover { transform: scale(1.15) rotate(5deg); }
-
-/* ═══════════════════════════════════════════════════════
-   FLOATING HEADER
-   ═══════════════════════════════════════════════════════ */
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translate(-50%, -20px); }
-  to { opacity: 1; transform: translate(-50%, 0); }
-}
-.header-visible { animation: slideDown 0.4s var(--ease-out) both; }
-
-/* ═══════════════════════════════════════════════════════
-   LINK UNDERLINE
-   ═══════════════════════════════════════════════════════ */
 
 .link-underline { position: relative; }
 .link-underline::after {
@@ -191,24 +192,76 @@ html {
   left: 0;
   width: 0;
   height: 2px;
+  background-color: var(--color-accent);
   transition: width var(--duration-normal) var(--ease-out);
 }
 .link-underline:hover::after { width: 100%; }
 
-/* ═══════════════════════════════════════════════════════
-   TIMELINE
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   SHIMMER BAR (section separator)
+   ═══════════════════════════════════════════════════════════ */
 
-@keyframes timelineDraw {
-  from { width: 0; }
-  to { width: 100%; }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-.timeline-line { animation: timelineDraw 1s var(--ease-out) both; }
+.bar-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary) 25%,
+    var(--color-primary-light) 50%,
+    var(--color-primary) 75%,
+    var(--color-primary-dark) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
 
-/* ═══════════════════════════════════════════════════════
-   ACCESSIBILITY
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   FLOATING HEADER
+   ═══════════════════════════════════════════════════════════ */
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.header-visible { animation: slideDown 0.4s var(--ease-out) both; }
+
+/* ═══════════════════════════════════════════════════════════
+   PROJECT CARD SHINE EFFECT
+   ═══════════════════════════════════════════════════════════ */
+
+.project-card { position: relative; overflow: hidden; }
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  transition: left 0.5s ease;
+}
+.project-card:hover::before { left: 100%; }
+
+/* ═══════════════════════════════════════════════════════════
+   QUOTE FLOAT
+   ═══════════════════════════════════════════════════════════ */
+
+@keyframes quoteFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.quote-float { animation: quoteFloat 4s ease-in-out infinite; }
+
+/* ═══════════════════════════════════════════════════════════
+   SMOOTH SCROLL + ACCESSIBILITY
+   ═══════════════════════════════════════════════════════════ */
+
+html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

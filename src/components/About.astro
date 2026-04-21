@@ -2,40 +2,46 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="py-12 md:py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-      <!-- Title -->
-      <div class="lg:col-span-3 reveal-left">
-        <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>
-          About Me
-        </h2>
-        <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
-      </div>
+<section
+  id="about"
+  class="relative py-20 md:py-28 lg:py-32"
+  style={`background-color: ${siteConfig.colors.surface}`}
+>
+  <!-- Decorative compass rose (bg) -->
+  <svg class="absolute top-10 right-10 w-40 h-40 opacity-[0.06] hidden md:block" viewBox="0 0 100 100" fill="none" style={`color: ${siteConfig.colors.primaryDark};`}>
+    <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="0.5" />
+    <circle cx="50" cy="50" r="36" stroke="currentColor" stroke-width="0.5" />
+    <path d="M50 2 L50 98 M2 50 L98 50" stroke="currentColor" stroke-width="0.5" />
+    <path d="M50 10 L55 50 L50 90 L45 50 Z" fill="currentColor" />
+    <path d="M10 50 L50 55 L90 50 L50 45 Z" fill="currentColor" opacity="0.5" />
+    <text x="50" y="8" text-anchor="middle" font-size="6" fill="currentColor" font-family="serif">N</text>
+  </svg>
 
-      <!-- Bio -->
-      <div class="lg:col-span-9 reveal stagger-1">
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          <Fragment set:html={siteConfig.aboutMe} />
-        </p>
-      </div>
+  <div class="max-w-5xl mx-auto px-6 lg:px-12 relative">
+    <!-- Section label -->
+    <div class="reveal flex items-center gap-3 mb-8 justify-center">
+      <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+      <span class="text-[11px] tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+        Professional Profile
+      </span>
+      <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
     </div>
 
-    <!-- Skills -->
-    <div class="mt-10 pt-8 border-t reveal stagger-2" style={`border-color: ${siteConfig.accentColor}15`}>
-      <h3 class="text-sm font-semibold uppercase tracking-wider mb-4" style={`color: ${siteConfig.accentColor}`}>
-        Core Competencies
-      </h3>
-      <div class="flex flex-wrap gap-2">
-        {siteConfig.skills.map((skill) => (
-          <span
-            class="skill-hover px-4 py-2 rounded-full text-sm font-medium cursor-default"
-            style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}; border: 1px solid ${siteConfig.accentColor}25`}
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
+    <!-- Big editorial quote -->
+    <p
+      class="reveal text-2xl md:text-3xl lg:text-4xl leading-[1.35] text-center font-light"
+      style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}
+    >
+      <span class="inline-block" style={`color: ${siteConfig.colors.accent}; font-size: 1.6em; line-height: 0; vertical-align: -0.25em; margin-right: 0.1em;`}>"</span>
+      {siteConfig.professionalProfile}
+      <span class="inline-block" style={`color: ${siteConfig.colors.accent}; font-size: 1.6em; line-height: 0; vertical-align: -0.55em; margin-left: 0.1em;`}>"</span>
+    </p>
+
+    <!-- Signature -->
+    <div class="reveal mt-10 flex items-center gap-4 justify-center">
+      <span class="w-16 h-px" style={`background-color: ${siteConfig.colors.primary}60;`}></span>
+      <span class="text-sm tracking-[0.25em] uppercase font-medium" style={`color: ${siteConfig.colors.primary};`}>{siteConfig.quote.author}</span>
+      <span class="w-16 h-px" style={`background-color: ${siteConfig.colors.primary}60;`}></span>
     </div>
   </div>
 </section>

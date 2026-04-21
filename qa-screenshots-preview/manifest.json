@@ -1,0 +1,150 @@
+{
+  "url": "http://localhost:4488",
+  "timestamp": "2026-04-21T16:48:07.109Z",
+  "desktop": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "full": {
+      "file": "desktop-full.png",
+      "fileSize": "2517KB"
+    },
+    "sections": [
+      {
+        "file": "desktop-hero.png",
+        "section": "hero",
+        "height": 1130,
+        "fileSize": "759KB"
+      },
+      {
+        "file": "desktop-about.png",
+        "section": "about",
+        "height": 753,
+        "fileSize": "119KB"
+      },
+      {
+        "file": "desktop-experience.png",
+        "section": "experience",
+        "height": 3243,
+        "fileSize": "1832KB"
+      },
+      {
+        "file": "desktop-section-3.png",
+        "section": "section-3",
+        "height": 630,
+        "fileSize": "900KB"
+      },
+      {
+        "file": "desktop-offshore.png",
+        "section": "offshore",
+        "height": 949,
+        "fileSize": "103KB"
+      },
+      {
+        "file": "desktop-certifications.png",
+        "section": "certifications",
+        "height": 1057,
+        "fileSize": "128KB"
+      },
+      {
+        "file": "desktop-competencies.png",
+        "section": "competencies",
+        "height": 788,
+        "fileSize": "24KB"
+      },
+      {
+        "file": "desktop-references.png",
+        "section": "references",
+        "height": 845,
+        "fileSize": "77KB"
+      },
+      {
+        "file": "desktop-contact.png",
+        "section": "contact",
+        "height": 550,
+        "fileSize": "44KB"
+      },
+      {
+        "file": "desktop-footer-9.png",
+        "section": "footer-9",
+        "height": 330,
+        "fileSize": "36KB"
+      }
+    ],
+    "pageHeight": 10274
+  },
+  "mobile": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "full": {
+      "file": "mobile-full.png",
+      "fileSize": "1159KB"
+    },
+    "sections": [
+      {
+        "file": "mobile-hero.png",
+        "section": "hero",
+        "height": 1258,
+        "fileSize": "233KB"
+      },
+      {
+        "file": "mobile-about.png",
+        "section": "about",
+        "height": 787,
+        "fileSize": "77KB"
+      },
+      {
+        "file": "mobile-experience.png",
+        "section": "experience",
+        "height": 4049,
+        "fileSize": "763KB"
+      },
+      {
+        "file": "mobile-section-3.png",
+        "section": "section-3",
+        "height": 447,
+        "fileSize": "16KB"
+      },
+      {
+        "file": "mobile-offshore.png",
+        "section": "offshore",
+        "height": 1322,
+        "fileSize": "90KB"
+      },
+      {
+        "file": "mobile-certifications.png",
+        "section": "certifications",
+        "height": 1584,
+        "fileSize": "92KB"
+      },
+      {
+        "file": "mobile-competencies.png",
+        "section": "competencies",
+        "height": 1081,
+        "fileSize": "63KB"
+      },
+      {
+        "file": "mobile-references.png",
+        "section": "references",
+        "height": 1227,
+        "fileSize": "70KB"
+      },
+      {
+        "file": "mobile-contact.png",
+        "section": "contact",
+        "height": 635,
+        "fileSize": "27KB"
+      },
+      {
+        "file": "mobile-footer-9.png",
+        "section": "footer-9",
+        "height": 664,
+        "fileSize": "36KB"
+      }
+    ],
+    "pageHeight": 13051
+  }
+}

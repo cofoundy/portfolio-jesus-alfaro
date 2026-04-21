@@ -1,117 +1,242 @@
 export const siteConfig = {
   name: "Jesus Alfaro",
-  title: "Deck Officer & Dynamic Positioning Officer",
+  title: "OOW Unlimited · Deckhand / Junior Officer",
   description:
-    "Licensed OOW Unlimited with DP-certified offshore experience transitioning into the superyacht sector. Calm under pressure, decisive, and highly adaptable.",
+    "Jesus Alfaro — OOW Unlimited Deckhand based in Fort Lauderdale. Seeking a long-term position onboard a private or charter motor yacht.",
+  accentColor: "#0A1628",
 
-  // 2-color system: deep navy (maritime) + steel blue (professional accent)
-  accentColor: "#0B1D33",
-  highlightColor: "#3B82B0",
+  // Premium palette — Maritime Editorial (navy + teak gold)
+  colors: {
+    primaryDark: "#0A1628", // Midnight navy — headings, footer
+    primary: "#1E3A5F", // Deep navy — borders, badges
+    primaryLight: "#4A6FA5", // Steel blue — shimmer light
+    accent: "#C9A96E", // Champagne gold / teak — CTAs, accents
+    surface: "#F5F1EA", // Bone/sand (teak deck) — section bg
+    surfaceLight: "#FAFAF7", // Ivory — hero bg
+  },
 
-  // Hero stats
+  tagline:
+    "Seeking a long-term position onboard a private or charter motor yacht. Currently supporting daily operations aboard a private 87' motor yacht in Fort Lauderdale.",
+
+  locationLine: "Fort Lauderdale, FL · Available Immediately",
+  statusChip: "Currently onboard M/Y Princess Ashita — 87′",
+
   stats: [
     { value: "OOW", label: "Unlimited License" },
-    { value: "DP2", label: "Certified Officer" },
-    { value: "3+", label: "Regions Operated" },
+    { value: "5+", label: "Yachts in 2026" },
+    { value: "4", label: "Professional References" },
   ],
 
-  // Hero tagline
-  tagline:
-    "Licensed Deck Officer with DP-certified offshore experience, transitioning into the superyacht industry.",
+  professionalProfile:
+    "OOW unlimited with a strong commercial offshore background, currently working as Mate/Deckhand onboard a private 87′ motor yacht in Fort Lauderdale. Hands-on experience in deck operations, maintenance, owner trips, and tender handling, combined with solid bridge watchkeeping and navigation skills. Proactive, reliable, and comfortable working independently in demanding environments, with a strong focus on safety, presentation, and operational efficiency.",
+
+  quote: {
+    text: "Every passage is precision. Every deck is a standard.",
+    author: "Jesus Alfaro",
+  },
+
+  // Yachting Experience — alternating layout with photos
+  yachtingExperience: [
+    {
+      vessel: "M/Y Princess Ashita",
+      size: "87′ Motor Yacht",
+      location: "Fort Lauderdale, FL",
+      role: "Mate / Deckhand — Day Trips",
+      dates: "April 2026 – Present",
+      current: true,
+      image: "/yacht-yacht1.webp",
+      imageAlt: "Detailing a private motor yacht at Fort Lauderdale marina",
+      bullets: [
+        "Supporting the captain as sole deck crew in daily vessel operations",
+        "Full exterior maintenance, washdowns, detailing, and upkeep",
+        "Docking operations, lines and fenders handling",
+        "Participating in owner trips and supporting guest operations onboard",
+        "Operating and assisting with tender operations (inflatable dinghy)",
+      ],
+    },
+    {
+      vessel: "M/Y Incognito",
+      size: "130′ Motor Yacht",
+      location: "Boca Raton, FL",
+      role: "Deckhand — Daywork",
+      dates: "April 2nd, 2026",
+      current: false,
+      image: "/yacht-yacht2.webp",
+      imageAlt: "Deck work and line handling on bow",
+      bullets: [
+        "Intensive deck cleaning and heavy-duty maintenance to uphold vessel standards",
+        "Full deck organization and detailed upkeep of exterior areas",
+        "Engine room cleaning and heavy-duty maintenance support",
+      ],
+    },
+    {
+      vessel: "All Class Detailing",
+      size: "Multiple Yachts · West Palm Beach Boat Show",
+      location: "Fort Lauderdale & West Palm Beach, FL",
+      role: "Deckhand / Yacht Detailer",
+      dates: "March 21st – 30th, 2026 · 10 days",
+      current: false,
+      image: "/yacht-yacht3.webp",
+      imageAlt: "Superyachts at West Palm Beach Boat Show",
+      bullets: [
+        "Worked on multiple yachts at the West Palm Beach Boat Show (Sunseeker, Jupiter, Sirena)",
+        "Full exterior detailing: washdowns, polishing, and surface care",
+        "Teak maintenance — 2-step cleaning and brightening process on various vessels",
+        "Yacht preparation to meet highest presentation standards for show conditions",
+      ],
+    },
+    {
+      vessel: "M/Y Irvette (previously M/Y Mystere)",
+      size: "108′ Motor Yacht",
+      location: "Fort Lauderdale, FL",
+      role: "Deckhand",
+      dates: "March 6th – 19th, 2026 · 14 days",
+      current: false,
+      image: "/yacht-yacht4.webp",
+      imageAlt: "VHF radio communication during vessel operations",
+      bullets: [
+        "Full exterior washdown and detailing to maintain yacht presentation",
+        "Deck cleaning, maintenance, and preparation of exterior areas",
+        "Full teak treatment — cleaning and brightening, 2-step process",
+        "Vinyl lettering removal and installation (yacht name)",
+      ],
+    },
+    {
+      vessel: "F/V Dropout",
+      size: "57′ Sportfishing Yacht",
+      location: "Fort Lauderdale, FL",
+      role: "Deckhand",
+      dates: "March 2nd – 5th, 2026 · 3 days",
+      current: false,
+      image: "/yacht-yacht5.webp",
+      imageAlt: "Marina sunset from sportfishing yacht deck",
+      bullets: [
+        "Exterior washdown and general vessel cleaning",
+        "Deck maintenance and detailing tasks",
+        "Supported routine deck duties and operational readiness",
+      ],
+    },
+  ],
+
+  offshoreBackground: {
+    title: "Professional Maritime Background",
+    period: "2023 – 2025",
+    company: "HF Offshore / Harren & Partner",
+    roles: "3rd Officer → 2nd Officer / DPO (Dynamic Positioning Officer)",
+    vessels: "DP2 Offshore Support & Diving Vessels",
+    operationalArea: "The Caribbean · West Africa · Gulf of Mexico",
+    clients: ["Chevron", "Saipem", "Pemex"],
+    responsibilities: [
+      "Navigational watchkeeping in heavy traffic and restricted waters",
+      "Passage planning and chart corrections (ECDIS & paper charts)",
+      "Bridge Resource Management within multicultural bridge teams",
+      "Collision avoidance and COLREG application",
+      "GMDSS communications and safety reporting",
+      "Safety equipment inspections and emergency preparedness",
+      "Support for dynamic operations requiring high situational awareness",
+      "Safety compliance during diving and subsea operations",
+    ],
+  },
+
+  certifications: {
+    licenses: ["Officer of the Watch (OOW) Unlimited", "DP Unlimited License"],
+    safety: [
+      "STCW Basic Safety Training",
+      "Advanced Fire Fighting",
+      "Proficiency in Survival Craft & Rescue Boats",
+      "Ship Security Officer",
+    ],
+    bridge: [
+      "ECDIS (IMO + Specific — Wartsila Sam Chartpilot)",
+      "Radar / ARPA",
+      "GMDSS",
+      "Bridge Resource Management",
+      "AIS Certification",
+    ],
+    medical: ["Medical First Aid", "Medical Care"],
+  },
+
+  competencies: {
+    operational: [
+      "Bridge Watchkeeping & Navigation",
+      "Passage Planning & Situational Awareness",
+      "COLREG Compliance",
+      "Safety & Emergency Procedures",
+      "Deck Operations Support",
+      "Line Handling & Mooring Operations",
+      "Docking Assistance",
+    ],
+    attributes: [
+      "Strong Work Ethic & Adaptability",
+      "Calm Under Pressure",
+      "Professional Presentation",
+      "Guest-Focused Mindset",
+      "Multicultural Team Experience",
+      "Long-Term Commitment to Yachting",
+    ],
+  },
+
+  personalDetails: {
+    nationality: "Peruvian",
+    dateOfBirth: "06 December 1997",
+    languages: [
+      { name: "English", level: "Fluent" },
+      { name: "Spanish", level: "Native" },
+      { name: "Portuguese", level: "Intermediate" },
+    ],
+    medical: "ENG1 — Valid until 18 February 2028 · Non-smoker · Fit & Healthy",
+    visas: [
+      "US C1/D Visa — Valid until 2030",
+      "US B1/B2 Visa — Valid until 2036",
+      "Schengen Visa Free Access (Peruvian Passport)",
+    ],
+  },
+
+  references: [
+    {
+      name: "Capt. Jhonny Pretell",
+      role: "Offshore Operations Consultant · Owner, Sailing Yacht Saucy Sue",
+      flag: "🇲🇽",
+      phone: "+52 938 130 0298",
+      email: "j.pretell@harren-group.com",
+    },
+    {
+      name: "Max Ciurlizza",
+      role: "Chief Mate · Superyachts",
+      flag: "🇬🇧",
+      whatsapp: "+44 7445 804713",
+    },
+    {
+      name: "Joshua Cleghorn",
+      role: "Chief Mate · Superyachts",
+      flag: "🇳🇦",
+      whatsapp: "+264 81 777 0087",
+    },
+    {
+      name: "Juan Lamprecht",
+      role: "Chief Mate · Superyachts",
+      flag: "🇺🇸",
+      whatsapp: "+1 231 342 7608",
+    },
+  ],
+
+  cta: {
+    title: "Ready to Join Your Crew",
+    description:
+      "Available immediately · Fort Lauderdale based. Open to permanent, rotational, or temporary positions onboard private or charter motor yachts.",
+    buttonText: "Get in Touch",
+    emailSubject: "Position Inquiry — Jesus Alfaro",
+  },
 
   social: {
     email: "jesusalfaro116@gmail.com",
-    linkedin:
-      "https://www.linkedin.com/in/jesus-alfaro-27645614b",
+    linkedin: "https://www.linkedin.com/in/jesus-alfaro-27645614b",
+    phoneUS: "+1 (754) 277-0935",
+    phoneUSHref: "tel:+17542770935",
   },
 
-  aboutMe:
-    "Licensed OOW Unlimited with progressive DP-certified offshore experience supporting major international energy operators including Chevron, Saipem, and Pemex. I have served on DP2 Offshore Support & Diving Vessels across the Caribbean, West Africa, and the Gulf of Mexico — advancing from 3rd Officer to 2nd Officer / DPO. I am now transitioning intentionally into the superyacht sector, bringing strong navigational discipline, safety culture, and a guest-focused mindset to contribute to a professional bridge team. Committed to building a long-term career within the superyacht industry, with the ambition to grow through the officer ranks based on performance, leadership, and dedication.",
+  cvFile: "/cv.pdf",
 
-  skills: [
-    "Bridge Watchkeeping",
-    "Passage Planning",
-    "Dynamic Positioning",
-    "COLREG Compliance",
-    "ECDIS & Radar/ARPA",
-    "GMDSS Communications",
-    "Bridge Resource Management",
-    "Safety & Emergency Procedures",
-    "Ship Security",
-    "Advanced Fire Fighting",
-    "Medical First Aid",
-    "Multicultural Teams",
-  ],
-
-  projects: [
-    {
-      name: "Officer of the Watch (OOW) — Unlimited",
-      description:
-        "Full navigational watchkeeping license with unlimited tonnage and trading area authority. Core qualification for bridge operations worldwide.",
-      link: "",
-      skills: ["STCW", "Navigation", "Unlimited"],
-    },
-    {
-      name: "Dynamic Positioning — Unlimited License",
-      description:
-        "Certified DP Operator with hands-on experience maintaining vessel position during complex diving and subsea operations in challenging environments.",
-      link: "",
-      skills: ["DP2", "Offshore", "Station Keeping"],
-    },
-    {
-      name: "ECDIS — IMO + Wartsila Sam Chartpilot",
-      description:
-        "Type-specific certification for Electronic Chart Display and Information Systems. Proficient in digital passage planning and chart management.",
-      link: "",
-      skills: ["ECDIS", "IMO", "Wartsila"],
-    },
-    {
-      name: "Safety & Emergency Certifications",
-      description:
-        "Advanced Fire Fighting, Proficiency in Survival Craft & Rescue Boats, Ship Security Officer, Medical First Aid, and Medical Care certifications.",
-      link: "",
-      skills: ["Fire Fighting", "Survival Craft", "Medical Care"],
-    },
-  ],
-
-  experience: [
-    {
-      company: "HF Offshore / Harren & Partner",
-      title: "2nd Officer / DPO — DP2 Offshore Support & Diving Vessels",
-      dateRange: "2023 — 2025",
-      bullets: [
-        "Navigational watchkeeping in heavy traffic and restricted waters across the Caribbean, West Africa, and the Gulf of Mexico",
-        "Passage planning, chart corrections (ECDIS & paper charts), and COLREG compliance",
-        "Bridge Resource Management within multicultural bridge teams supporting Chevron, Saipem, and Pemex operations",
-        "GMDSS communications, safety reporting, and emergency preparedness",
-        "Dynamic positioning operations during diving and subsea support missions",
-        "Promoted from 3rd Officer to 2nd Officer / DPO based on performance",
-      ],
-    },
-  ],
-
-  education: [
-    {
-      school: "Maritime Professional Certifications",
-      degree: "OOW Unlimited · DP Unlimited · STCW",
-      dateRange: "",
-      achievements: [
-        "Officer of the Watch — Unlimited",
-        "Dynamic Positioning — Unlimited License",
-        "STCW Basic Safety Training",
-        "Bridge Resource Management",
-      ],
-    },
-    {
-      school: "Medical & Safety Training",
-      degree: "Advanced Fire Fighting · Medical Care · Ship Security",
-      dateRange: "",
-      achievements: [
-        "Advanced Fire Fighting",
-        "Proficiency in Survival Craft & Rescue Boats",
-        "Ship Security Officer",
-        "Medical First Aid & Medical Care",
-      ],
-    },
-  ],
+  dividerImage: "/yacht-divider-night.webp",
+  dividerQuote: "Every passage is precision.",
 };

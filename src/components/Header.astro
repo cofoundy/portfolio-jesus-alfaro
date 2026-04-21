@@ -1,46 +1,48 @@
 ---
 import { siteConfig } from "../config";
-
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
+<!-- Floating pill nav — appears after scrolling past hero -->
 <header
   id="header"
   class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden md:block opacity-0 pointer-events-none transition-all duration-500"
 >
   <nav
-    class="px-6 py-3 rounded-full shadow-lg backdrop-blur-md bg-white/90"
-    style={`border: 1px solid ${siteConfig.accentColor}15`}
+    class="px-7 py-3 rounded-full shadow-xl backdrop-blur-lg"
+    style={`background-color: ${siteConfig.colors.surfaceLight}ee; border: 1px solid ${siteConfig.colors.primary}25`}
   >
-    <ul class="flex items-center gap-6">
+    <ul class="flex items-center gap-7">
       <li>
-        <a href="#about" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}; --underline-color: ${siteConfig.highlightColor}`}>
-          About
+        <a
+          href="#hero"
+          class="text-xs font-semibold tracking-[0.18em] uppercase"
+          style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 0.08em;`}
+        >
+          JA
         </a>
       </li>
-      {hasProjects && (
-        <li>
-          <a href="#projects" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Certifications
-          </a>
-        </li>
-      )}
-      {hasExperience && (
-        <li>
-          <a href="#experience" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Experience
-          </a>
-        </li>
-      )}
-      {hasEducation && (
-        <li>
-          <a href="#education" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Training
-          </a>
-        </li>
-      )}
+      <li class="w-px h-4" style={`background-color: ${siteConfig.colors.primary}30`}></li>
+      <li>
+        <a href="#about" class="link-underline text-xs font-medium tracking-wider uppercase transition-colors duration-300" style={`color: ${siteConfig.colors.primaryDark}`}>About</a>
+      </li>
+      <li>
+        <a href="#experience" class="link-underline text-xs font-medium tracking-wider uppercase transition-colors duration-300" style={`color: ${siteConfig.colors.primaryDark}`}>Experience</a>
+      </li>
+      <li>
+        <a href="#certifications" class="link-underline text-xs font-medium tracking-wider uppercase transition-colors duration-300" style={`color: ${siteConfig.colors.primaryDark}`}>Certifications</a>
+      </li>
+      <li>
+        <a href="#references" class="link-underline text-xs font-medium tracking-wider uppercase transition-colors duration-300" style={`color: ${siteConfig.colors.primaryDark}`}>References</a>
+      </li>
+      <li>
+        <a
+          href="#contact"
+          class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300"
+          style={`background-color: ${siteConfig.colors.accent}; color: ${siteConfig.colors.primaryDark};`}
+        >
+          Contact
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -50,10 +52,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     const header = document.getElementById("header");
     if (window.scrollY > 400) {
       header?.classList.remove("opacity-0", "pointer-events-none");
-      header?.classList.add("opacity-100", "pointer-events-auto", "header-visible");
+      header?.classList.add("opacity-100", "pointer-events-auto");
     } else {
       header?.classList.add("opacity-0", "pointer-events-none");
-      header?.classList.remove("opacity-100", "pointer-events-auto", "header-visible");
+      header?.classList.remove("opacity-100", "pointer-events-auto");
     }
   });
 </script>

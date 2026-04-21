@@ -1,0 +1,119 @@
+---
+import { siteConfig } from "../config";
+const c = siteConfig.certifications;
+const p = siteConfig.personalDetails;
+
+const blocks = [
+  { label: "Licenses", items: c.licenses, icon: "license" },
+  { label: "Safety & Mandatory Training", items: c.safety, icon: "safety" },
+  { label: "Bridge & Navigation", items: c.bridge, icon: "bridge" },
+  { label: "Medical", items: c.medical, icon: "medical" },
+];
+---
+
+<section
+  id="certifications"
+  class="py-20 md:py-28"
+  style={`background-color: ${siteConfig.colors.surfaceLight}`}
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="mb-14 text-center reveal">
+      <div class="flex items-center gap-3 justify-center mb-4">
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+          Licenses &amp; Certifications
+        </span>
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+      </div>
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight"
+        style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}
+      >
+        Credentials &amp; <em class="italic" style={`color: ${siteConfig.colors.primary}`}>Personal Details</em>
+      </h2>
+    </div>
+
+    <!-- Grid 2 cols -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Left col: Certifications -->
+      <div class="reveal-left space-y-10">
+        {blocks.map((block) => (
+          <div>
+            <div class="flex items-center gap-3 mb-4 pb-3 border-b" style={`border-color: ${siteConfig.colors.accent}40;`}>
+              <h3 class="text-xs tracking-[0.25em] uppercase font-bold" style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Montserrat', sans-serif;`}>
+                {block.label}
+              </h3>
+            </div>
+            <ul class="space-y-2">
+              {block.items.map((item) => (
+                <li class="flex items-start gap-3 text-sm md:text-base" style={`color: ${siteConfig.colors.primaryDark};`}>
+                  <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={`color: ${siteConfig.colors.accent};`}>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <!-- Right col: Personal Details -->
+      <div class="reveal-right">
+        <div
+          class="rounded-sm p-8 lg:p-10 sticky top-24"
+          style={`background-color: ${siteConfig.colors.surface}; border: 1px solid ${siteConfig.colors.primary}20;`}
+        >
+          <h3 class="text-xs tracking-[0.25em] uppercase font-bold mb-6 pb-3 border-b" style={`color: ${siteConfig.colors.primaryDark}; border-color: ${siteConfig.colors.accent}40; font-family: 'Montserrat', sans-serif;`}>
+            Personal Details
+          </h3>
+
+          <dl class="space-y-5">
+            <div>
+              <dt class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-1" style={`color: ${siteConfig.colors.primary};`}>Nationality</dt>
+              <dd class="text-sm md:text-base" style={`color: ${siteConfig.colors.primaryDark};`}>{p.nationality}</dd>
+            </div>
+
+            <div>
+              <dt class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-1" style={`color: ${siteConfig.colors.primary};`}>Date of Birth</dt>
+              <dd class="text-sm md:text-base" style={`color: ${siteConfig.colors.primaryDark};`}>{p.dateOfBirth}</dd>
+            </div>
+
+            <div>
+              <dt class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-2" style={`color: ${siteConfig.colors.primary};`}>Languages</dt>
+              <dd class="flex flex-wrap gap-2">
+                {p.languages.map((lang) => (
+                  <span class="text-xs px-3 py-1 rounded-full font-medium" style={`background-color: ${siteConfig.colors.surfaceLight}; color: ${siteConfig.colors.primaryDark}; border: 1px solid ${siteConfig.colors.primary}30;`}>
+                    <strong class="font-semibold">{lang.name}</strong> · <span style={`color: ${siteConfig.colors.primary};`}>{lang.level}</span>
+                  </span>
+                ))}
+              </dd>
+            </div>
+
+            <div>
+              <dt class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-1" style={`color: ${siteConfig.colors.primary};`}>Medical</dt>
+              <dd class="text-sm leading-relaxed" style={`color: ${siteConfig.colors.primaryDark};`}>{p.medical}</dd>
+            </div>
+
+            <div>
+              <dt class="text-[10px] tracking-[0.25em] uppercase font-semibold mb-2" style={`color: ${siteConfig.colors.primary};`}>Visas &amp; Travel</dt>
+              <dd>
+                <ul class="space-y-1.5">
+                  {p.visas.map((v) => (
+                    <li class="flex items-start gap-2 text-sm" style={`color: ${siteConfig.colors.primaryDark};`}>
+                      <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style={`color: ${siteConfig.colors.accent};`}>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>{v}</span>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

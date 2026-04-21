@@ -1,0 +1,71 @@
+---
+import { siteConfig } from "../config";
+const c = siteConfig.competencies;
+---
+
+<section
+  id="competencies"
+  class="py-20 md:py-28"
+  style={`background-color: ${siteConfig.colors.surface}`}
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="mb-14 text-center reveal">
+      <div class="flex items-center gap-3 justify-center mb-4">
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+          Core Competencies
+        </span>
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+      </div>
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight"
+        style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}
+      >
+        Skills &amp; <em class="italic" style={`color: ${siteConfig.colors.primary}`}>Professional Attributes</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Operational Skills -->
+      <div class="reveal-left">
+        <div class="flex items-center gap-3 mb-6">
+          <svg class="w-8 h-8 p-1.5 rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={`color: ${siteConfig.colors.accent}; background-color: ${siteConfig.colors.primaryDark};`}>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+          </svg>
+          <h3 class="text-lg font-semibold tracking-wide" style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Montserrat', sans-serif;`}>
+            Operational Skills
+          </h3>
+        </div>
+        <ul class="space-y-3">
+          {c.operational.map((s) => (
+            <li class="flex items-center gap-3 text-sm md:text-base py-2 border-b" style={`color: ${siteConfig.colors.primaryDark}; border-color: ${siteConfig.colors.primary}15;`}>
+              <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background-color: ${siteConfig.colors.accent};`}></span>
+              <span>{s}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Professional Attributes -->
+      <div class="reveal-right">
+        <div class="flex items-center gap-3 mb-6">
+          <svg class="w-8 h-8 p-1.5 rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={`color: ${siteConfig.colors.accent}; background-color: ${siteConfig.colors.primaryDark};`}>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          <h3 class="text-lg font-semibold tracking-wide" style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Montserrat', sans-serif;`}>
+            Professional Attributes
+          </h3>
+        </div>
+        <ul class="space-y-3">
+          {c.attributes.map((s) => (
+            <li class="flex items-center gap-3 text-sm md:text-base py-2 border-b" style={`color: ${siteConfig.colors.primaryDark}; border-color: ${siteConfig.colors.primary}15;`}>
+              <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background-color: ${siteConfig.colors.accent};`}></span>
+              <span>{s}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
