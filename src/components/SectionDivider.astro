@@ -27,8 +27,11 @@ const {
       class="absolute inset-0 w-full h-full object-cover"
       loading="lazy"
     />
-    <!-- Navy overlay -->
-    <div class="absolute inset-0" style={`background: linear-gradient(180deg, ${siteConfig.colors.primaryDark}60 0%, ${siteConfig.colors.primaryDark}40 50%, ${siteConfig.colors.primaryDark}80 100%);`}></div>
+    <!-- Navy overlay (vertical gradient — stronger top/bottom, mid darker than before) -->
+    <div class="absolute inset-0" style={`background: linear-gradient(180deg, ${siteConfig.colors.primaryDark}B3 0%, ${siteConfig.colors.primaryDark}80 45%, ${siteConfig.colors.primaryDark}80 55%, ${siteConfig.colors.primaryDark}E0 100%);`}></div>
+
+    <!-- Radial vignette behind text (concentrates darkness in center for legibility) -->
+    <div class="absolute inset-0" style={`background: radial-gradient(ellipse at center, ${siteConfig.colors.primaryDark}99 0%, transparent 70%);`}></div>
 
     <!-- Centered quote -->
     <div class="relative h-full flex items-center justify-center px-6">
@@ -42,11 +45,11 @@ const {
         </div>
         <blockquote
           class="text-3xl md:text-5xl lg:text-6xl font-light italic leading-tight"
-          style={`color: ${siteConfig.colors.surfaceLight}; font-family: 'Cormorant Garamond', serif;`}
+          style={`color: ${siteConfig.colors.surfaceLight}; font-family: 'Cormorant Garamond', serif; text-shadow: 0 2px 24px ${siteConfig.colors.primaryDark}cc, 0 1px 4px ${siteConfig.colors.primaryDark}99;`}
         >
           {quote}
         </blockquote>
-        <p class="mt-6 text-xs md:text-sm tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+        <p class="mt-6 text-xs md:text-sm tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif; text-shadow: 0 1px 8px ${siteConfig.colors.primaryDark}cc;`}>
           {caption}
         </p>
       </div>
