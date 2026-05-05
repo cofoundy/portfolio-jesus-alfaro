@@ -24,7 +24,7 @@ export const siteConfig = {
   stats: [
     { value: "3", label: "Active Licenses" },
     { value: "6+", label: "Yachts in 2026" },
-    { value: "5", label: "Professional References" },
+    { value: "6", label: "Professional References" },
   ],
 
   professionalProfile:
@@ -216,6 +216,14 @@ export const siteConfig = {
   },
 
   references: [
+    {
+      name: "Capt. Johan Conradie",
+      role: "Captain · M/Y Q",
+      flag: "🇺🇸",
+      phone: "+1 336 210 0193",
+      whatsapp: "+1 336 210 0193",
+      email: "captain@myqyacht.com",
+    },
     {
       name: "Capt. Sylvester Moise",
       role: "Captain · M/Y Princess Ashita",

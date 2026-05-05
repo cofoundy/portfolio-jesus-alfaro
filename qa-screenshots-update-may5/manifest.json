@@ -1,0 +1,162 @@
+{
+  "url": "https://jesus-alfaro.cofoundy.dev",
+  "timestamp": "2026-05-05T21:29:08.466Z",
+  "desktop": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "full": {
+      "file": "desktop-full.png",
+      "fileSize": "2987KB"
+    },
+    "sections": [
+      {
+        "file": "desktop-hero.png",
+        "section": "hero",
+        "height": 1130,
+        "fileSize": "846KB"
+      },
+      {
+        "file": "desktop-about.png",
+        "section": "about",
+        "height": 705,
+        "fileSize": "107KB"
+      },
+      {
+        "file": "desktop-experience.png",
+        "section": "experience",
+        "height": 3944,
+        "fileSize": "1397KB"
+      },
+      {
+        "file": "desktop-section-3.png",
+        "section": "section-3",
+        "height": 630,
+        "fileSize": "35KB"
+      },
+      {
+        "file": "desktop-offshore.png",
+        "section": "offshore",
+        "height": 949,
+        "fileSize": "102KB"
+      },
+      {
+        "file": "desktop-offshore-credentials.png",
+        "section": "offshore-credentials",
+        "height": 1014,
+        "fileSize": "147KB"
+      },
+      {
+        "file": "desktop-certifications.png",
+        "section": "certifications",
+        "height": 1089,
+        "fileSize": "136KB"
+      },
+      {
+        "file": "desktop-competencies.png",
+        "section": "competencies",
+        "height": 788,
+        "fileSize": "24KB"
+      },
+      {
+        "file": "desktop-references.png",
+        "section": "references",
+        "height": 1163,
+        "fileSize": "108KB"
+      },
+      {
+        "file": "desktop-contact.png",
+        "section": "contact",
+        "height": 550,
+        "fileSize": "11KB"
+      },
+      {
+        "file": "desktop-footer-10.png",
+        "section": "footer-10",
+        "height": 330,
+        "fileSize": "36KB"
+      }
+    ],
+    "pageHeight": 12290
+  },
+  "mobile": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "full": {
+      "file": "mobile-full.png",
+      "fileSize": "1416KB"
+    },
+    "sections": [
+      {
+        "file": "mobile-hero.png",
+        "section": "hero",
+        "height": 1300,
+        "fileSize": "246KB"
+      },
+      {
+        "file": "mobile-about.png",
+        "section": "about",
+        "height": 690,
+        "fileSize": "69KB"
+      },
+      {
+        "file": "mobile-experience.png",
+        "section": "experience",
+        "height": 4960,
+        "fileSize": "521KB"
+      },
+      {
+        "file": "mobile-section-3.png",
+        "section": "section-3",
+        "height": 447,
+        "fileSize": "16KB"
+      },
+      {
+        "file": "mobile-offshore.png",
+        "section": "offshore",
+        "height": 1322,
+        "fileSize": "90KB"
+      },
+      {
+        "file": "mobile-offshore-credentials.png",
+        "section": "offshore-credentials",
+        "height": 1906,
+        "fileSize": "151KB"
+      },
+      {
+        "file": "mobile-certifications.png",
+        "section": "certifications",
+        "height": 1632,
+        "fileSize": "97KB"
+      },
+      {
+        "file": "mobile-competencies.png",
+        "section": "competencies",
+        "height": 1081,
+        "fileSize": "63KB"
+      },
+      {
+        "file": "mobile-references.png",
+        "section": "references",
+        "height": 1565,
+        "fileSize": "91KB"
+      },
+      {
+        "file": "mobile-contact.png",
+        "section": "contact",
+        "height": 635,
+        "fileSize": "27KB"
+      },
+      {
+        "file": "mobile-footer-10.png",
+        "section": "footer-10",
+        "height": 664,
+        "fileSize": "36KB"
+      }
+    ],
+    "pageHeight": 16200
+  }
+}
