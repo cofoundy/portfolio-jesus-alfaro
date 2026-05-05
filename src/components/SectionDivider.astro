@@ -1,5 +1,19 @@
 ---
 import { siteConfig } from "../config";
+
+interface Props {
+  image?: string;
+  quote?: string;
+  caption?: string;
+  alt?: string;
+}
+
+const {
+  image = siteConfig.dividerImage,
+  quote = siteConfig.dividerQuote,
+  caption = "Safety · Precision · Presentation",
+  alt = "Yachting moment",
+} = Astro.props;
 ---
 
 <section
@@ -8,8 +22,8 @@ import { siteConfig } from "../config";
 >
   <div class="relative h-[55vh] md:h-[65vh] lg:h-[70vh] w-full">
     <img
-      src={siteConfig.dividerImage}
-      alt="Superyacht at night"
+      src={image}
+      alt={alt}
       class="absolute inset-0 w-full h-full object-cover"
       loading="lazy"
     />
@@ -30,10 +44,10 @@ import { siteConfig } from "../config";
           class="text-3xl md:text-5xl lg:text-6xl font-light italic leading-tight"
           style={`color: ${siteConfig.colors.surfaceLight}; font-family: 'Cormorant Garamond', serif;`}
         >
-          {siteConfig.dividerQuote}
+          {quote}
         </blockquote>
         <p class="mt-6 text-xs md:text-sm tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
-          Safety · Precision · Presentation
+          {caption}
         </p>
       </div>
     </div>
