@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Jesus Alfaro",
-  title: "OOW Unlimited · Mate/Deckhand · 2nd Officer",
+  title: "Deck Officer · OOW Unlimited · DP Operator · Chief Officer <3000 GT",
   description:
-    "Jesus Alfaro — OOW Unlimited Deckhand based in Fort Lauderdale. Seeking a long-term position onboard a private or charter motor yacht.",
+    "Jesus Alfaro — Deck Officer with OOW Unlimited, DP Unlimited, and Chief Officer <3000 GT licenses. Fort Lauderdale based. Seeking a 3rd Officer position on a 80m+ motor yacht.",
   accentColor: "#0A1628",
 
   // Premium palette — Maritime Editorial (navy + teak gold)
@@ -16,19 +16,19 @@ export const siteConfig = {
   },
 
   tagline:
-    "Seeking a long-term position onboard a private or charter motor yacht. OOW Unlimited with commercial offshore background and hands-on yacht deck experience across Fort Lauderdale.",
+    "Deck Officer with Chief Officer <3000 GT, OOW Unlimited, and DP Unlimited certifications. Currently performing as Chief Officer (Relief) onboard a 72m+ motor yacht. Seeking a 3rd Officer position on a 80m+ motor yacht.",
 
   locationLine: "Fort Lauderdale, FL · Available Immediately",
   statusChip: "Fort Lauderdale Based",
 
   stats: [
-    { value: "OOW", label: "Unlimited License" },
-    { value: "5+", label: "Yachts in 2026" },
-    { value: "4", label: "Professional References" },
+    { value: "3", label: "Active Licenses" },
+    { value: "6+", label: "Yachts in 2026" },
+    { value: "5", label: "Professional References" },
   ],
 
   professionalProfile:
-    "OOW unlimited with a strong commercial offshore background, currently working as Mate/Deckhand onboard a private 87′ motor yacht in Fort Lauderdale. Hands-on experience in deck operations, maintenance, owner trips, and tender handling, combined with solid bridge watchkeeping and navigation skills. Proactive, reliable, and comfortable working independently in demanding environments, with a strong focus on safety, presentation, and operational efficiency.",
+    "Deck Officer with Chief Officer <3000 GT STCW II/2 license and DP Unlimited certification, with solid offshore experience as 3rd/2nd Officer on DP2 vessels. Strong background in bridge watchkeeping, navigation, GMDSS communications, and safety management. Currently gaining yachting experience while performing as Chief Officer (Relief). Seeking a 3rd Officer position on a 80m+ motor yacht.",
 
   quote: {
     text: "Every passage is precision. Every deck is a standard.",
@@ -38,20 +38,39 @@ export const siteConfig = {
   // Yachting Experience — alternating layout with photos
   yachtingExperience: [
     {
+      vessel: "M/Y Q",
+      size: "72.45 m Motor Yacht",
+      location: "Fort Lauderdale, FL",
+      role: "Chief Officer (Relief)",
+      dates: "April 2026",
+      current: true,
+      image: "/yacht-myq-bridge.webp",
+      imageAlt: "Jesus Alfaro on M/Y Q bridge in officer uniform with ECDIS and radar consoles",
+      bullets: [
+        "Providing professional guest interaction and support during owner operations",
+        "Supporting bridge operations and maintaining situational awareness during vessel activities",
+        "Assisting with tender operations and deck coordination in line with bridge instructions",
+        "Supervising deck activities and contributing to daily workflow planning",
+        "Maintaining safety equipment readiness",
+        "Assisting the Captain with overall vessel operations and safety compliance",
+      ],
+    },
+    {
       vessel: "M/Y Princess Ashita",
       size: "87′ Motor Yacht",
       location: "Fort Lauderdale, FL",
-      role: "Mate / Deckhand — Day Trips",
-      dates: "April 3 – April 17, 2026",
+      role: "Mate / Deckhand",
+      dates: "April 2026",
       current: false,
-      image: "/yacht-yacht1.webp",
-      imageAlt: "Detailing a private motor yacht at Fort Lauderdale marina",
+      image: "/yacht-marina-sunset.webp",
+      imageAlt: "Jesus Alfaro on private 87′ motor yacht at Fort Lauderdale marina",
       bullets: [
-        "Supporting the captain as sole deck crew in daily vessel operations",
-        "Full exterior maintenance, washdowns, detailing, and upkeep",
-        "Docking operations, lines and fenders handling",
-        "Participating in owner trips and supporting guest operations onboard",
-        "Operating and assisting with tender operations (inflatable dinghy)",
+        "Supported bridge and deck coordination during vessel operations",
+        "Assisted with docking procedures, line handling, and fender setup",
+        "Operated and assisted with tender operations",
+        "Worked closely with the Captain as sole deck crew, ensuring safe and efficient daily operations",
+        "Maintained exterior readiness to superyacht presentation standards",
+        "Provided support during owner trips, assisting with guest interaction and onboard service",
       ],
     },
     {
@@ -139,7 +158,11 @@ export const siteConfig = {
   },
 
   certifications: {
-    licenses: ["Officer of the Watch (OOW) Unlimited", "DP Unlimited License"],
+    licenses: [
+      "Chief Officer <3000 GT — STCW II/2",
+      "Officer of the Watch (OOW) Unlimited — STCW II/1",
+      "DP Unlimited License",
+    ],
     safety: [
       "STCW Basic Safety Training",
       "Advanced Fire Fighting",
