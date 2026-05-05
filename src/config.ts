@@ -62,8 +62,8 @@ export const siteConfig = {
       role: "Mate / Deckhand",
       dates: "April 2026",
       current: false,
-      image: "/yacht-marina-sunset.webp",
-      imageAlt: "Jesus Alfaro on private 87′ motor yacht at Fort Lauderdale marina",
+      image: "/yacht-princess-ashita.webp",
+      imageAlt: "Line handling on M/Y Princess Ashita foredeck",
       bullets: [
         "Supported bridge and deck coordination during vessel operations",
         "Assisted with docking procedures, line handling, and fender setup",
