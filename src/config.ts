@@ -62,8 +62,8 @@ export const siteConfig = {
       role: "Mate / Deckhand",
       dates: "April 2026",
       current: false,
-      image: "/yacht-princess-ashita.webp",
-      imageAlt: "Line handling on M/Y Princess Ashita foredeck",
+      image: "/yacht-jesus-onboard.webp",
+      imageAlt: "Jesus Alfaro onboard M/Y Princess Ashita in Fort Lauderdale",
       bullets: [
         "Supported bridge and deck coordination during vessel operations",
         "Assisted with docking procedures, line handling, and fender setup",
