@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Jesus Alfaro",
-  title: "Deck Officer · OOW Unlimited · DP Operator · Chief Officer <3000 GT",
+  title: "2nd Officer · Chief Officer <3000 GT · DP Unlimited",
   description:
-    "Jesus Alfaro — Deck Officer with OOW Unlimited, DP Unlimited, and Chief Officer <3000 GT licenses. Fort Lauderdale based. Seeking a 3rd Officer position on a 80m+ motor yacht.",
+    "Jesus Alfaro — 2nd Officer with Chief Officer <3000 GT and DP Unlimited licenses. Mediterranean-based. Seeking Rotational Second Officer opportunities.",
   accentColor: "#0A1628",
 
   // Premium palette — Maritime Editorial (navy + teak gold)
@@ -16,19 +16,19 @@ export const siteConfig = {
   },
 
   tagline:
-    "Deck Officer with Chief Officer <3000 GT, OOW Unlimited, and DP Unlimited certifications. Currently performing as Chief Officer (Relief) onboard a 72m+ motor yacht. Seeking a 3rd Officer position on a 80m+ motor yacht.",
+    "Deck Officer with Chief Officer <3000 GT, OOW Unlimited, and DP Unlimited certifications. Currently performing as 2nd Officer onboard a 67m motor yacht in the Mediterranean. Seeking Rotational Second Officer opportunities.",
 
-  locationLine: "Fort Lauderdale, FL · Available Immediately",
-  statusChip: "Fort Lauderdale Based",
+  locationLine: "Mediterranean-Based · Available by Arrangement",
+  statusChip: "Mediterranean-Based",
 
   stats: [
     { value: "3", label: "Active Licenses" },
-    { value: "6+", label: "Yachts in 2026" },
+    { value: "4", label: "Yachts in 2026" },
     { value: "6", label: "Professional References" },
   ],
 
   professionalProfile:
-    "Deck Officer with Chief Officer <3000 GT STCW II/2 license and DP Unlimited certification, with solid offshore experience as 3rd/2nd Officer on DP2 vessels. Strong background in bridge watchkeeping, navigation, GMDSS communications, and safety management. Currently gaining yachting experience while performing as Chief Officer (Relief). Seeking a 3rd Officer position on a 80m+ motor yacht.",
+    "2nd Officer with Chief Officer <3000 GT STCW II/2 license and DP Unlimited certification, with solid offshore experience as 3rd/2nd Officer on DP2 vessels. Strong background in bridge watchkeeping, navigation, GMDSS communications, and safety management. Currently yachting experience as a Chief Officer (Relief) and 2nd Officer on a 72m and 67m motor yacht. Seeking Rotational Second Officer opportunities.",
 
   quote: {
     text: "Every passage is precision. Every deck is a standard.",
@@ -38,12 +38,28 @@ export const siteConfig = {
   // Yachting Experience — alternating layout with photos
   yachtingExperience: [
     {
+      vessel: "M/Y Maria",
+      size: "67 m Motor Yacht · Dual Season",
+      location: "Mediterranean",
+      role: "2nd Officer",
+      dates: "May 2026 – Current",
+      current: true,
+      image: "/yacht-maria-jetski.jpg",
+      imageAlt: "Jesus Alfaro on watertoy duty aboard M/Y Maria off Marbella, Mediterranean",
+      bullets: [
+        "Assisting with bridge operations (navigation, anchorage and mooring), all bridge equipment (steering, radars, ECDIS, stabilizers), GMDSS radio station, LSA and FFE, and deck maintenance and supervision",
+        "Supporting mooring operations, tender handling (Yachtwerft Meyer Open Tender 8.4 m), and navigational watches (crossing from USA to Med)",
+        "Painting preparations, fiberglass laminating and fairing, deck protection, and contractor coordination",
+        "Supporting watertoys operations: jet skis, e-foil, jetsurf board, seabob, wakesurfing with a Nautique G23 tender, inflatables, diving support, and fishing",
+      ],
+    },
+    {
       vessel: "M/Y Q",
       size: "72.45 m Motor Yacht",
-      location: "Fort Lauderdale, FL",
+      location: "Wilmington, NC",
       role: "Chief Officer (Relief)",
       dates: "April 2026",
-      current: true,
+      current: false,
       image: "/yacht-myq-bridge.webp",
       imageAlt: "Jesus Alfaro on M/Y Q bridge in officer uniform with ECDIS and radar consoles",
       bullets: [
@@ -56,52 +72,20 @@ export const siteConfig = {
       ],
     },
     {
-      vessel: "M/Y Princess Ashita",
+      vessel: "M/Y Inizio",
       size: "87′ Motor Yacht",
-      location: "Fort Lauderdale, FL",
-      role: "Mate / Deckhand",
+      location: "West Palm Beach, Rybovich, FL",
+      role: "Mate",
       dates: "April 2026",
       current: false,
-      image: "/yacht-jesus-onboard.webp",
-      imageAlt: "Jesus Alfaro onboard M/Y Princess Ashita in Fort Lauderdale",
+      image: "/yacht-yacht2.webp",
+      imageAlt: "Jesus Alfaro onboard in West Palm Beach",
       bullets: [
         "Supported bridge and deck coordination during vessel operations",
         "Assisted with docking procedures, line handling, and fender setup",
         "Operated and assisted with tender operations",
         "Worked closely with the Captain as sole deck crew, ensuring safe and efficient daily operations",
-        "Maintained exterior readiness to superyacht presentation standards",
         "Provided support during owner trips, assisting with guest interaction and onboard service",
-      ],
-    },
-    {
-      vessel: "M/Y Incognito",
-      size: "130′ Motor Yacht",
-      location: "Boca Raton, FL",
-      role: "Deckhand — Daywork",
-      dates: "April 2nd, 2026",
-      current: false,
-      image: "/yacht-yacht2.webp",
-      imageAlt: "Deck work and line handling on bow",
-      bullets: [
-        "Intensive deck cleaning and heavy-duty maintenance to uphold vessel standards",
-        "Full deck organization and detailed upkeep of exterior areas",
-        "Engine room cleaning and heavy-duty maintenance support",
-      ],
-    },
-    {
-      vessel: "All Class Detailing",
-      size: "Multiple Yachts · West Palm Beach Boat Show",
-      location: "Fort Lauderdale & West Palm Beach, FL",
-      role: "Deckhand / Yacht Detailer",
-      dates: "March 21st – 30th, 2026 · 10 days",
-      current: false,
-      image: "/yacht-yacht3.webp",
-      imageAlt: "Jesus Alfaro on yacht deck during All Class Detailing project",
-      bullets: [
-        "Worked on multiple yachts at the West Palm Beach Boat Show (Sunseeker, Jupiter, Sirena)",
-        "Full exterior detailing: washdowns, polishing, and surface care",
-        "Teak maintenance — 2-step cleaning and brightening process on various vessels",
-        "Yacht preparation to meet highest presentation standards for show conditions",
       ],
     },
     {
@@ -109,7 +93,7 @@ export const siteConfig = {
       size: "108′ Motor Yacht",
       location: "Fort Lauderdale, FL",
       role: "Deckhand",
-      dates: "March 6th – 19th, 2026 · 14 days",
+      dates: "March 2026",
       current: false,
       image: "/yacht-yacht4.webp",
       imageAlt: "Polishing M/Y Mystere exterior in Fort Lauderdale marina",
@@ -118,21 +102,6 @@ export const siteConfig = {
         "Deck cleaning, maintenance, and preparation of exterior areas",
         "Full teak treatment — cleaning and brightening, 2-step process",
         "Vinyl lettering removal and installation (yacht name)",
-      ],
-    },
-    {
-      vessel: "F/V Dropout",
-      size: "57′ Sportfishing Yacht",
-      location: "Fort Lauderdale, FL",
-      role: "Deckhand",
-      dates: "March 2nd – 5th, 2026 · 3 days",
-      current: false,
-      image: "/yacht-yacht5.webp",
-      imageAlt: "Marina sunset from sportfishing yacht deck",
-      bullets: [
-        "Exterior washdown and general vessel cleaning",
-        "Deck maintenance and detailing tasks",
-        "Supported routine deck duties and operational readiness",
       ],
     },
   ],
@@ -248,15 +217,15 @@ export const siteConfig = {
     },
     {
       name: "Joshua Cleghorn",
-      role: "Chief Mate · Superyachts",
+      role: "Chief Mate · M/Y Irvette",
       flag: "🇳🇦",
       whatsapp: "+264 81 777 0087",
     },
     {
-      name: "Juan Lamprecht",
-      role: "Chief Mate · Superyachts",
+      name: "Capt. John Rose",
+      role: "Captain · M/Y Inizio",
       flag: "🇺🇸",
-      whatsapp: "+1 231 342 7608",
+      whatsapp: "+1 540 246 9925",
     },
   ],
 
@@ -305,7 +274,7 @@ export const siteConfig = {
   cta: {
     title: "Ready to Join Your Crew",
     description:
-      "Available immediately · Fort Lauderdale based. Open to permanent, rotational, or temporary positions onboard private or charter motor yachts.",
+      "Mediterranean-based · Available by arrangement. Open to permanent, rotational, or temporary positions onboard private or charter motor yachts.",
     buttonText: "Get in Touch",
     emailSubject: "Position Inquiry — Jesus Alfaro",
   },
