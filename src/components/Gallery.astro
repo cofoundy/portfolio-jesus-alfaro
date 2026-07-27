@@ -1,0 +1,47 @@
+---
+import { siteConfig } from "../config";
+
+const photos = [
+  { src: "/yacht-maria-portrait.jpg", alt: "Jesus Alfaro aboard M/Y Maria, watertoy deck" },
+  { src: "/yacht-maria-sunset.jpg", alt: "Sunset watch aboard M/Y Maria, Mediterranean" },
+  { src: "/yacht-maria-helm.jpg", alt: "M/Y Maria bridge helm and navigation console" },
+  { src: "/yacht-maria-firefighting.jpg", alt: "Fire and safety equipment drill aboard M/Y Maria" },
+  { src: "/yacht-maria-deck.jpg", alt: "Deck protection and detailing aboard M/Y Maria" },
+  { src: "/yacht-maria-bridge-selfie.jpg", alt: "On watch aboard M/Y Maria" },
+  { src: "/yacht-maria-navstation.jpg", alt: "Navigation station aboard M/Y Maria" },
+  { src: "/yacht-maria-bow.jpg", alt: "Foredeck maintenance aboard M/Y Maria" },
+];
+---
+
+<section class="py-20 md:py-28" style={`background-color: ${siteConfig.colors.surface}`}>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="mb-12 md:mb-16 text-center reveal">
+      <div class="flex items-center gap-3 justify-center mb-4">
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+          Life Onboard
+        </span>
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+      </div>
+      <h2
+        class="text-4xl md:text-5xl font-light leading-tight"
+        style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}
+      >
+        Aboard <em class="italic" style={`color: ${siteConfig.colors.primary}`}>M/Y Maria.</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      {photos.map((photo, idx) => (
+        <div class={`reveal-scale relative aspect-[3/4] overflow-hidden rounded-sm shadow-md ${idx === 0 || idx === 5 ? "md:row-span-2 md:aspect-auto" : ""}`}>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
