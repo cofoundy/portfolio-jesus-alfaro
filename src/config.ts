@@ -274,7 +274,7 @@ export const siteConfig = {
   cta: {
     title: "Ready to Join Your Crew",
     description:
-      "Mediterranean-based · Available by arrangement. Open to permanent, rotational, or temporary positions onboard private or charter motor yachts.",
+      "Mediterranean-based · Available by arrangement. Open to permanent or rotational positions onboard private or charter motor yachts.",
     buttonText: "Get in Touch",
     emailSubject: "Position Inquiry — Jesus Alfaro",
   },
