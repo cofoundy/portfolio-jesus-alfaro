@@ -44,7 +44,7 @@ export const siteConfig = {
       role: "2nd Officer",
       dates: "May 2026 – Current",
       current: true,
-      image: "/yacht-maria-jetski.jpg",
+      image: "/yacht-maria-jetski.webp",
       imageAlt: "Jesus Alfaro on watertoy duty aboard M/Y Maria off Marbella, Mediterranean",
       bullets: [
         "Assisting with bridge operations (navigation, anchorage and mooring), all bridge equipment (steering, radars, ECDIS, stabilizers), GMDSS radio station, LSA and FFE, and deck maintenance and supervision",
