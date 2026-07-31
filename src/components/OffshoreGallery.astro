@@ -1,0 +1,47 @@
+---
+import { siteConfig } from "../config";
+
+const photos = [
+  { src: "/offshore-portrait.jpg", alt: "Jesus Alfaro aboard an offshore support vessel" },
+  { src: "/offshore-dp-console.jpg", alt: "Dynamic Positioning console, HF Offshore" },
+  { src: "/offshore-helideck-sunset.jpg", alt: "Helideck at sunset, offshore support vessel" },
+  { src: "/offshore-fire-drill.jpg", alt: "Fire drill on the helideck, SCBA equipment" },
+  { src: "/offshore-bridge-night.jpg", alt: "Night bridge watch, DP joystick control" },
+  { src: "/offshore-transfer.jpg", alt: "PPE and transfer operations offshore" },
+  { src: "/offshore-night-lift.jpg", alt: "Night crane lift operation at an offshore platform" },
+  { src: "/offshore-drill-team.jpg", alt: "Fire and safety drill briefing with crew" },
+];
+---
+
+<section class="py-20 md:py-28" style={`background-color: ${siteConfig.colors.surfaceLight}`}>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="mb-12 md:mb-16 text-center reveal">
+      <div class="flex items-center gap-3 justify-center mb-4">
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase font-semibold" style={`color: ${siteConfig.colors.accent}; font-family: 'Montserrat', sans-serif;`}>
+          Offshore Operations
+        </span>
+        <span class="w-10 h-px" style={`background-color: ${siteConfig.colors.accent}`}></span>
+      </div>
+      <h2
+        class="text-4xl md:text-5xl font-light leading-tight"
+        style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Cormorant Garamond', serif;`}
+      >
+        Drills & <em class="italic" style={`color: ${siteConfig.colors.primary}`}>Dynamic Positioning.</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      {photos.map((photo, idx) => (
+        <div class={`reveal-scale relative aspect-[3/4] overflow-hidden rounded-sm shadow-md ${idx === 1 || idx === 6 ? "md:row-span-2 md:aspect-auto" : ""}`}>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
